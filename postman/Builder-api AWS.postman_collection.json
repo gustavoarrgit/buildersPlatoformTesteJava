@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "e9590d63-68b4-443b-9620-1ea5a3fa2983",
+		"name": "Builder-api AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pesquisar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "EC2Co-EcsEl-1234TG1AEGEWR-990819905.us-east-2.elb.amazonaws.com:8080/builder-api/cliente/1",
+					"host": [
+						"EC2Co-EcsEl-1234TG1AEGEWR-990819905",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"builder-api",
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SalvarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome\":\"Usuário\",\r\n    \"idade\": 30,\r\n    \"cpf\": 92488151033,\r\n    \"dataNascimento\": \"01/01/2000\"\r\n           \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "EC2Co-EcsEl-1234TG1AEGEWR-990819905.us-east-2.elb.amazonaws.com:8080/builder-api/cliente",
+					"host": [
+						"EC2Co-EcsEl-1234TG1AEGEWR-990819905",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"builder-api",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n\t\"nome\":\"Usuário Alterado\",\r\n    \"idade\": 31,\r\n    \"cpf\": \"92488151033\",\r\n    \"dataNascimento\": \"02/02/2001\"\r\n           \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "EC2Co-EcsEl-1234TG1AEGEWR-990819905.us-east-2.elb.amazonaws.com:8080/builder-api/cliente",
+					"host": [
+						"EC2Co-EcsEl-1234TG1AEGEWR-990819905",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"builder-api",
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n\t\"nome\":\"Usuário Alterado 2\",\r\n    \"idade\": 55,\r\n    \"cpf\": \"99999999999\",\r\n    \"dataNascimeto\": \"02/02/2001\"\r\n           \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "EC2Co-EcsEl-1234TG1AEGEWR-990819905.us-east-2.elb.amazonaws.com:8080/builder-api/cliente/1",
+					"host": [
+						"EC2Co-EcsEl-1234TG1AEGEWR-990819905",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"builder-api",
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Paginado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"pageNo\": 0,\r\n    \"pageSize\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "EC2Co-EcsEl-1234TG1AEGEWR-990819905.us-east-2.elb.amazonaws.com:8080/builder-api/cliente/listar",
+					"host": [
+						"EC2Co-EcsEl-1234TG1AEGEWR-990819905",
+						"us-east-2",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"builder-api",
+						"cliente",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  backend-builder-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: backend-builder-api:latest
+    ports:
+    - 8080:8080
+    depends_on:
+    - db-builder
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db-builder:3306/BUILDER
+  db-builder:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: BUILDER
+    ports:
+    - 3306:3306
+    volumes:
+    - db_builder:/var/lib/mysql
+volumes:
+  db_builder:
